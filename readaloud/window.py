@@ -11,6 +11,7 @@ from gi.repository import Gtk, Adw, GLib, Gdk, GdkPixbuf
 
 from readaloud.i18n import _
 from readaloud.ocr import scan_and_extract
+from readaloud.file_import import import_file
 from readaloud.tts import TTSEngine
 
 
@@ -68,15 +69,28 @@ class ReadAloudWindow(Adw.ApplicationWindow):
         self._preview_frame.set_child(placeholder_label)
         content_box.append(self._preview_frame)
 
-        # Scan button - large and accessible
-        self._scan_button = Gtk.Button(label=_("Scan Text"))
+        # Action buttons - Camera and File Open
+        button_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=12)
+        button_box.set_halign(Gtk.Align.CENTER)
+
+        self._scan_button = Gtk.Button(label=_("Camera"))
         self._scan_button.set_icon_name("camera-photo-symbolic")
         self._scan_button.add_css_class("suggested-action")
         self._scan_button.add_css_class("pill")
-        self._scan_button.set_size_request(-1, 56)
+        self._scan_button.set_size_request(120, 56)
         self._scan_button.set_tooltip_text(_("Take a photo and extract text"))
         self._scan_button.connect("clicked", self._on_scan_clicked)
-        content_box.append(self._scan_button)
+        button_box.append(self._scan_button)
+
+        self._file_button = Gtk.Button(label=_("Open File"))
+        self._file_button.set_icon_name("document-open-symbolic")
+        self._file_button.add_css_class("pill")
+        self._file_button.set_size_request(120, 56)
+        self._file_button.set_tooltip_text(_("Open PDF, image, text or DOCX file"))
+        self._file_button.connect("clicked", self._on_file_clicked)
+        button_box.append(self._file_button)
+
+        content_box.append(button_box)
 
         # Scanned text display
         text_label = Gtk.Label(label=_("Scanned Text"))
@@ -277,6 +291,94 @@ class ReadAloudWindow(Adw.ApplicationWindow):
         """Stop TTS."""
         self._tts.stop()
         self._on_speech_done()
+
+    def _on_file_clicked(self, button):
+        """Handle file open button click."""
+        dialog = Gtk.FileChooserDialog(
+            title=_("Open File"),
+            transient_for=self,
+            action=Gtk.FileChooserAction.OPEN,
+        )
+        dialog.add_button(_("Cancel"), Gtk.ResponseType.CANCEL)
+        dialog.add_button(_("Open"), Gtk.ResponseType.ACCEPT)
+        
+        # Add file filters
+        filter_text = Gtk.FileFilter()
+        filter_text.set_name(_("Text files"))
+        filter_text.add_mime_type("text/plain")
+        dialog.add_filter(filter_text)
+        
+        filter_pdf = Gtk.FileFilter()
+        filter_pdf.set_name(_("PDF files"))
+        filter_pdf.add_mime_type("application/pdf")
+        dialog.add_filter(filter_pdf)
+        
+        filter_image = Gtk.FileFilter()
+        filter_image.set_name(_("Image files"))
+        filter_image.add_mime_type("image/png")
+        filter_image.add_mime_type("image/jpeg")
+        filter_image.add_mime_type("image/jpg")
+        dialog.add_filter(filter_image)
+        
+        filter_docx = Gtk.FileFilter()
+        filter_docx.set_name(_("Word documents"))
+        filter_docx.add_mime_type("application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+        dialog.add_filter(filter_docx)
+        
+        filter_all = Gtk.FileFilter()
+        filter_all.set_name(_("All supported files"))
+        filter_all.add_mime_type("text/plain")
+        filter_all.add_mime_type("application/pdf")
+        filter_all.add_mime_type("image/png")
+        filter_all.add_mime_type("image/jpeg")
+        filter_all.add_mime_type("application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+        dialog.add_filter(filter_all)
+        
+        dialog.connect("response", self._on_file_dialog_response)
+        dialog.present()
+    
+    def _on_file_dialog_response(self, dialog, response):
+        """Handle file dialog response."""
+        if response == Gtk.ResponseType.ACCEPT:
+            file = dialog.get_file()
+            if file:
+                file_path = file.get_path()
+                self._import_file_async(file_path)
+        dialog.destroy()
+    
+    def _import_file_async(self, file_path):
+        """Import file in background thread."""
+        self._file_button.set_sensitive(False)
+        self._file_button.set_label(_("Loading..."))
+        
+        def do_import():
+            try:
+                text = import_file(file_path)
+                GLib.idle_add(self._on_file_imported, text, None)
+            except Exception as e:
+                GLib.idle_add(self._on_file_imported, None, str(e))
+        
+        threading.Thread(target=do_import, daemon=True).start()
+    
+    def _on_file_imported(self, text, error):
+        """Handle file import completion."""
+        self._file_button.set_sensitive(True)
+        self._file_button.set_label(_("Open File"))
+        
+        if error:
+            self._show_error(_("Could not import file: %s") % error)
+            return
+        
+        if text:
+            buf = self._text_view.get_buffer()
+            buf.set_text(text)
+            self._play_button.set_sensitive(True)
+            # Clear preview for file imports
+            placeholder_label = Gtk.Label(label=_("File imported successfully"))
+            placeholder_label.add_css_class("dim-label")
+            self._preview_frame.set_child(placeholder_label)
+        else:
+            self._show_error(_("No text found in file."))
 
     def _show_error(self, message):
         """Show error in an accessible dialog."""

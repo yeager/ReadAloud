@@ -30,9 +30,13 @@ setup(
         "PyGObject>=3.42",
         "opencv-python>=4.5",
         "pytesseract>=0.3",
+        "pdfplumber>=0.7.0",
+        "pypdf>=3.0.0",
+        "python-docx>=0.8.11",
     ],
     extras_require={
         "pyttsx3": ["pyttsx3>=2.90"],
+        "piper": ["piper-tts>=1.2.0"],
     },
     python_requires=">=3.9",
     classifiers=[

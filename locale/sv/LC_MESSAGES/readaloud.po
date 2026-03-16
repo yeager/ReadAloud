@@ -1,117 +1,141 @@
 # Swedish translation for ReadAloud
-# Copyright (C) 2024 ReadAloud Team
-# This file is distributed under the GPL-3.0 license.
+# Copyright (C) 2026 ReadAloud Team
+# This file is distributed under the same license as ReadAloud
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ReadAloud 1.0.0\n"
+"Project-Id-Version: ReadAloud\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-01 00:00+0000\n"
-"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"POT-Creation-Date: 2026-03-16 14:00+0100\n"
+"PO-Revision-Date: 2026-03-16 14:00+0100\n"
 "Last-Translator: ReadAloud Team\n"
 "Language-Team: Swedish\n"
-"Language: sv\n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: readaloud/app.py
-msgid "Scan printed text and have it read aloud"
-msgstr "Skanna tryckt text och få den uppläst"
-
-#: readaloud/window.py
-msgid "About"
-msgstr "Om"
-
-#: readaloud/window.py
-msgid "Quit"
-msgstr "Avsluta"
-
-#: readaloud/window.py
+# Window UI strings
 msgid "Camera preview will appear here"
-msgstr "Kameraförhandsgranskning visas här"
+msgstr "Kameraförhands­granskning visas här"
 
-#: readaloud/window.py
-msgid "Scan Text"
-msgstr "Skanna text"
+msgid "Camera"
+msgstr "Kamera"
 
-#: readaloud/window.py
+msgid "Open File"
+msgstr "Öppna fil"
+
 msgid "Take a photo and extract text"
 msgstr "Ta ett foto och extrahera text"
 
-#: readaloud/window.py
+msgid "Open PDF, image, text or DOCX file"
+msgstr "Öppna PDF, bild, text eller DOCX-fil"
+
 msgid "Scanned Text"
 msgstr "Skannad text"
 
-#: readaloud/window.py
 msgid "Language:"
 msgstr "Språk:"
 
-#: readaloud/window.py
 msgid "Swedish"
 msgstr "Svenska"
 
-#: readaloud/window.py
 msgid "English"
 msgstr "Engelska"
 
-#: readaloud/window.py
 msgid "Swedish + English"
-msgstr "Svenska + Engelska"
+msgstr "Svenska + engelska"
 
-#: readaloud/window.py
 msgid "Select OCR and speech language"
-msgstr "Välj språk för OCR och tal"
+msgstr "Välj OCR- och talspråk"
 
-#: readaloud/window.py
 msgid "Read Aloud"
 msgstr "Läs upp"
 
-#: readaloud/window.py
-msgid "Start reading the text aloud"
-msgstr "Börja läsa texten högt"
-
-#: readaloud/window.py
 msgid "Pause"
 msgstr "Pausa"
 
-#: readaloud/window.py
-msgid "Pause reading"
-msgstr "Pausa uppläsning"
+msgid "Stop"
+msgstr "Stoppa"
 
-#: readaloud/window.py
 msgid "Resume"
 msgstr "Fortsätt"
 
-#: readaloud/window.py
-msgid "Stop"
-msgstr "Stopp"
+msgid "Start reading the text aloud"
+msgstr "Börja läsa upp texten"
 
-#: readaloud/window.py
+msgid "Pause reading"
+msgstr "Pausa uppläsningen"
+
 msgid "Stop reading"
-msgstr "Stoppa uppläsning"
+msgstr "Stoppa uppläsningen"
 
-#: readaloud/window.py
-msgid "TTS engine: %s"
-msgstr "TTS-motor: %s"
-
-#: readaloud/window.py
 msgid "Scanning..."
 msgstr "Skannar..."
 
-#: readaloud/window.py
+msgid "Loading..."
+msgstr "Läser in..."
+
+msgid "File imported successfully"
+msgstr "Filen importerades"
+
 msgid "Could not access camera. Check permissions."
 msgstr "Kunde inte komma åt kameran. Kontrollera behörigheter."
 
-#: readaloud/window.py
 msgid "No text detected. Try again with better lighting."
 msgstr "Ingen text hittades. Försök igen med bättre belysning."
 
-#: readaloud/window.py
+msgid "Could not import file: %s"
+msgstr "Kunde inte importera fil: %s"
+
+msgid "No text found in file."
+msgstr "Ingen text hittades i filen."
+
 msgid "Error"
 msgstr "Fel"
 
-#: readaloud/window.py
 msgid "OK"
 msgstr "OK"
+
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgid "Open"
+msgstr "Öppna"
+
+msgid "Text files"
+msgstr "Textfiler"
+
+msgid "PDF files"
+msgstr "PDF-filer"
+
+msgid "Image files"
+msgstr "Bildfiler"
+
+msgid "Word documents"
+msgstr "Word-dokument"
+
+msgid "All supported files"
+msgstr "Alla filer som stöds"
+
+# TTS Engine strings
+msgid "TTS engine: %s"
+msgstr "TTS-motor: %s"
+
+# App menu strings
+msgid "About"
+msgstr "Om"
+
+msgid "Quit"
+msgstr "Avsluta"
+
+# Desktop file strings
+msgid "ReadAloud"
+msgstr "ReadAloud"
+
+msgid "Scan and read text aloud"
+msgstr "Skanna och läs upp text"
+
+msgid "Scan printed text with camera and have it read aloud with Swedish voices"
+msgstr "Skanna tryckt text med kameran och få den uppläst med svenska röster"

@@ -1,116 +1,141 @@
-# ReadAloud - Translation Template
-# Copyright (C) 2024 ReadAloud Team
-# This file is distributed under the GPL-3.0 license.
+# ReadAloud Translation Template
+# Copyright (C) 2026 ReadAloud Team
+# This file is distributed under the same license as ReadAloud
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: ReadAloud 1.0.0\n"
+"Project-Id-Version: ReadAloud\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"POT-Creation-Date: 2026-03-16 14:00+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: readaloud/app.py
-msgid "Scan printed text and have it read aloud"
-msgstr ""
-
-#: readaloud/window.py
-msgid "About"
-msgstr ""
-
-#: readaloud/window.py
-msgid "Quit"
-msgstr ""
-
-#: readaloud/window.py
+# Window UI strings
 msgid "Camera preview will appear here"
 msgstr ""
 
-#: readaloud/window.py
-msgid "Scan Text"
+msgid "Camera"
 msgstr ""
 
-#: readaloud/window.py
+msgid "Open File"
+msgstr ""
+
 msgid "Take a photo and extract text"
 msgstr ""
 
-#: readaloud/window.py
+msgid "Open PDF, image, text or DOCX file"
+msgstr ""
+
 msgid "Scanned Text"
 msgstr ""
 
-#: readaloud/window.py
 msgid "Language:"
 msgstr ""
 
-#: readaloud/window.py
 msgid "Swedish"
 msgstr ""
 
-#: readaloud/window.py
 msgid "English"
 msgstr ""
 
-#: readaloud/window.py
 msgid "Swedish + English"
 msgstr ""
 
-#: readaloud/window.py
 msgid "Select OCR and speech language"
 msgstr ""
 
-#: readaloud/window.py
 msgid "Read Aloud"
 msgstr ""
 
-#: readaloud/window.py
-msgid "Start reading the text aloud"
-msgstr ""
-
-#: readaloud/window.py
 msgid "Pause"
 msgstr ""
 
-#: readaloud/window.py
-msgid "Pause reading"
-msgstr ""
-
-#: readaloud/window.py
-msgid "Resume"
-msgstr ""
-
-#: readaloud/window.py
 msgid "Stop"
 msgstr ""
 
-#: readaloud/window.py
+msgid "Resume"
+msgstr ""
+
+msgid "Start reading the text aloud"
+msgstr ""
+
+msgid "Pause reading"
+msgstr ""
+
 msgid "Stop reading"
 msgstr ""
 
-#: readaloud/window.py
-msgid "TTS engine: %s"
-msgstr ""
-
-#: readaloud/window.py
 msgid "Scanning..."
 msgstr ""
 
-#: readaloud/window.py
+msgid "Loading..."
+msgstr ""
+
+msgid "File imported successfully"
+msgstr ""
+
 msgid "Could not access camera. Check permissions."
 msgstr ""
 
-#: readaloud/window.py
 msgid "No text detected. Try again with better lighting."
 msgstr ""
 
-#: readaloud/window.py
+msgid "Could not import file: %s"
+msgstr ""
+
+msgid "No text found in file."
+msgstr ""
+
 msgid "Error"
 msgstr ""
 
-#: readaloud/window.py
 msgid "OK"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Open"
+msgstr ""
+
+msgid "Text files"
+msgstr ""
+
+msgid "PDF files"
+msgstr ""
+
+msgid "Image files"
+msgstr ""
+
+msgid "Word documents"
+msgstr ""
+
+msgid "All supported files"
+msgstr ""
+
+# TTS Engine strings
+msgid "TTS engine: %s"
+msgstr ""
+
+# App menu strings
+msgid "About"
+msgstr ""
+
+msgid "Quit"
+msgstr ""
+
+# Desktop file strings
+msgid "ReadAloud"
+msgstr ""
+
+msgid "Scan and read text aloud"
+msgstr ""
+
+msgid "Scan printed text with camera and have it read aloud with Swedish voices"
 msgstr ""
