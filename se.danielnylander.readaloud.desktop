@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=ReadAloud
+Name[sv]=Läs Högt
+Comment=Document reader with TTS
+Comment[sv]=Dokumentläsare med uppläsning
+GenericName=Accessibility Application
+GenericName[sv]=Tillgänglighetsapp
+Exec=python3 -m readaloud
+Icon=readaloud
+Terminal=false
+Type=Application
+Categories=Utility;Accessibility;
+Keywords=accessibility;a11y;
+Keywords[sv]=tillgänglighet;funktionsnedsättning;
