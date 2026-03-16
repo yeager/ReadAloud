@@ -1,0 +1,116 @@
+# ReadAloud - Translation Template
+# Copyright (C) 2024 ReadAloud Team
+# This file is distributed under the GPL-3.0 license.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ReadAloud 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: readaloud/app.py
+msgid "Scan printed text and have it read aloud"
+msgstr ""
+
+#: readaloud/window.py
+msgid "About"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Quit"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Camera preview will appear here"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Scan Text"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Take a photo and extract text"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Scanned Text"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Language:"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Swedish"
+msgstr ""
+
+#: readaloud/window.py
+msgid "English"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Swedish + English"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Select OCR and speech language"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Read Aloud"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Start reading the text aloud"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Pause"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Pause reading"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Resume"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Stop"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Stop reading"
+msgstr ""
+
+#: readaloud/window.py
+msgid "TTS engine: %s"
+msgstr ""
+
+#: readaloud/window.py
+msgid "Scanning..."
+msgstr ""
+
+#: readaloud/window.py
+msgid "Could not access camera. Check permissions."
+msgstr ""
+
+#: readaloud/window.py
+msgid "No text detected. Try again with better lighting."
+msgstr ""
+
+#: readaloud/window.py
+msgid "Error"
+msgstr ""
+
+#: readaloud/window.py
+msgid "OK"
+msgstr ""

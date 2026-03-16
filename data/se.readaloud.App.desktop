@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=ReadAloud
+Name[sv]=ReadAloud
+GenericName=Text Scanner and Reader
+GenericName[sv]=Textskanner och uppläsare
+Comment=Scan printed text and have it read aloud
+Comment[sv]=Skanna tryckt text och få den uppläst
+Exec=readaloud
+Icon=accessories-text-editor
+Terminal=false
+Type=Application
+Categories=Utility;Accessibility;
+Keywords=OCR;scan;read;aloud;text;speech;tts;
+Keywords[sv]=OCR;skanna;läsa;uppläsning;text;tal;
+StartupNotify=true

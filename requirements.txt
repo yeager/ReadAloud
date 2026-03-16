@@ -1,0 +1,4 @@
+PyGObject>=3.42
+opencv-python>=4.5
+pytesseract>=0.3
+pyttsx3>=2.90
