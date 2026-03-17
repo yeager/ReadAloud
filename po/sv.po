@@ -1,0 +1,83 @@
+# Translation file for ReadAloud
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Scan printed text and have it read aloud"
+msgstr "Sök igenom utskriven text och få den uppläst"
+
+msgid "About"
+msgstr "Om"
+
+msgid "Quit"
+msgstr "Avsluta"
+
+msgid "Camera preview will appear here"
+msgstr "Förhandsvisning av kameran visas här"
+
+msgid "Scan Text"
+msgstr "Sök igenom text"
+
+msgid "Take a photo and extract text"
+msgstr "Ta ett kort och extrahera texten"
+
+msgid "Scanned Text"
+msgstr "Inläst text"
+
+msgid "Language:"
+msgstr "Språk:"
+
+msgid "Swedish"
+msgstr "Svenska"
+
+msgid "English"
+msgstr "Engelska"
+
+msgid "Swedish + English"
+msgstr "Svenska + engelska"
+
+msgid "Select OCR and speech language"
+msgstr "Välj OCR och talat språk"
+
+msgid "Read Aloud"
+msgstr "Läs upp"
+
+msgid "Start reading the text aloud"
+msgstr "Börja läsa upp texten"
+
+msgid "Pause"
+msgstr "Pausa"
+
+msgid "Pause reading"
+msgstr "Pausa uppläsning"
+
+msgid "Stop"
+msgstr "Stoppa"
+
+msgid "Stop reading"
+msgstr "Stoppa uppläsning"
+
+msgid "TTS engine: %s"
+msgstr "Talsyntesmotor: %s"
+
+msgid "Scanning..."
+msgstr "Söker igenom..."
+
+msgid "Could not access camera. Check permissions."
+msgstr "Kunde inte komma åt kameran. Kontrollera behörigheter."
+
+msgid "No text detected. Try again with better lighting."
+msgstr "Ingen text upptäcktes. Försök igen med bättre ljus."
+
+msgid "Resume"
+msgstr "Återuppta"
+
+msgid "Error"
+msgstr "Fel"
+
+msgid "OK"
+msgstr "OK"
+
